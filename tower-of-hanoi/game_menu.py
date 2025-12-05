@@ -110,12 +110,12 @@ def add_tower_of_hanoi_to_menu():
     
     # Create buttons
     buttons = [
-        Button(SCREEN_WIDTH//2 - 150, 250, 300, 70, " START GAME", ACCENT),
-        Button(SCREEN_WIDTH//2 - 150, 350, 300, 70, " INSTRUCTIONS", SECONDARY),
-        Button(SCREEN_WIDTH//2 - 150, 450, 300, 70, " LEADERBOARD", PRIMARY),
-        Button(SCREEN_WIDTH//2 - 150, 550, 300, 70, " EXIT", (231, 76, 60))
+        Button(SCREEN_WIDTH//2 - 150, 250, 300, 70, "🎮 START GAME", ACCENT),
+        Button(SCREEN_WIDTH//2 - 150, 350, 300, 70, "📖 INSTRUCTIONS", SECONDARY),
+        Button(SCREEN_WIDTH//2 - 150, 450, 300, 70, "🏆 LEADERBOARD", PRIMARY),
+        Button(SCREEN_WIDTH//2 - 150, 550, 300, 70, "🚪 EXIT", (231, 76, 60))
     ]
-
+    
     # Particles for background effect
     particles = []
     for _ in range(50):
@@ -150,7 +150,7 @@ def add_tower_of_hanoi_to_menu():
         draw_particles(screen, particles)
         
         # Draw title with shadow
-        title_text = "TOWER OF HANOI"
+        title_text = "🏰 TOWER OF HANOI"
         title_shadow = title_font.render(title_text, True, SHADOW)
         title_main = title_font.render(title_text, True, (255, 215, 0))
         screen.blit(title_shadow, (SCREEN_WIDTH//2 - title_shadow.get_width()//2 + 3, 103))
@@ -174,9 +174,6 @@ def add_tower_of_hanoi_to_menu():
         
         pygame.display.flip()
         clock.tick(60)
-    
-    # Add a default return at the end
-    return '4'  # Exit if window closed
 
 def draw_animated_towers(surface):
     """Draw animated towers in background"""
@@ -223,7 +220,7 @@ def show_instructions():
     back_button = Button(SCREEN_WIDTH//2 - 100, 600, 200, 50, "⬅ BACK", SECONDARY)
     
     instructions = [
-        " TOWER OF HANOI RULES",
+        "🏰 TOWER OF HANOI RULES",
         "",
         "• Objective: Move all disks from first peg to last peg",
         "• Rules:",
@@ -231,7 +228,7 @@ def show_instructions():
         "  2. Larger disk cannot be placed on smaller disk",
         "  3. Use auxiliary pegs to help move disks",
         "",
-        " GAME FEATURES",
+        "🎮 GAME FEATURES",
         "• Random disks: 5 to 10 per game",
         "• Peg options: Choose 3 or 4 pegs",
         "• Move validation: Ensures legal moves only",
